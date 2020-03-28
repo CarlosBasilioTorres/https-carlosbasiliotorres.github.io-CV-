@@ -77,5 +77,18 @@ div.actividad-item{
     .content-landing .nombre{
         font-size: 20px;
     }
+    
+    .content-landing .actividades{
+        margin-top: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .content-landing .actividades div{     border: none;
+        padding: 3px 2px;
+        font-size: 10px
+    }
+    
+    
 }
 
