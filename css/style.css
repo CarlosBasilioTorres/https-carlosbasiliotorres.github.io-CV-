@@ -63,6 +63,65 @@ div.actividad-item{
 }
 
 
+/**/
+
+.contenedor{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about{
+    display: flex;
+    flex-direction: row;
+    margin: 90px 0px;
+    width: 100%;
+}
+
+.about > div{    
+    width: 100%;
+} 
+
+.about .semblanza{
+    width: 100%;
+    display: flex;    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+    box-shadow: -10px 10px 10px rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.1);    
+}    
+
+.about .imagen{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    position: relative;     
+    
+}
+
+.about .imagen img{
+    position: absolute;    
+    width: 60%;
+    border-radius: 360px;    
+}
+.content-list{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+}
+
+.content-list li{
+    text-align: start;
+}
+
+.content-list li i{
+    position: relative;
+    top: 5px;
+}
 @media(max-width:1000px){
     .margen{
         padding: 0px 10px;
@@ -72,6 +131,14 @@ div.actividad-item{
         font-size: 40px;
     }
 }
+
+@media(max-width:800px){
+    
+    .about{        
+        flex-direction: column;
+    }
+}
+
 
 @media(max-width:600px){
     .content-landing .nombre{
@@ -88,6 +155,7 @@ div.actividad-item{
         padding: 3px 2px;
         font-size: 10px
     }
+    
     
     
 }
