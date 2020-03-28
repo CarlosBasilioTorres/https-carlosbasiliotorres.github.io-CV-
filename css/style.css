@@ -122,6 +122,46 @@ div.actividad-item{
     position: relative;
     top: 5px;
 }
+
+.titulo{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.informacion{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.contenedor-informacion{
+    height: 350px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    
+}
+
+.titulo-contenido{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.swiper-button-prev{
+    position: absolute;
+    left: 150px;
+}
+
+.nota{
+    text-align: center;
+    font-style: italic;
+}
+
 @media(max-width:1000px){
     .margen{
         padding: 0px 10px;
@@ -136,6 +176,15 @@ div.actividad-item{
     
     .about{        
         flex-direction: column;
+    }
+        
+    
+    .informacion{
+        flex-direction: column;
+    }
+    
+    .contenedor-informacion{
+        width: 100%;
     }
     
     .about .imagen{
@@ -159,8 +208,5 @@ div.actividad-item{
         padding: 3px 2px;
         font-size: 10px
     }
-    
-    
-    
 }
 

@@ -5,11 +5,27 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-       <link rel="stylesheet" href="css/style.css"/>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/swiper.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
+       <!-- Demo styles -->
+  <style>
+
+    .swiper-container {
+      width:300px;
+      height: 300px;
+      position: absolute;      
+      margin-top: -0px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
     </head>
 
     <body>
@@ -105,21 +121,57 @@
           </div>
       </div>
       
-      <div class="fixed-action-btn">
-  <a class="btn-floating btn-large red">
-    <i class="large material-icons">mode_edit</i>
-  </a>
-  <ul>
-    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-  </ul>
-</div>
+      <div class="margen cursos-presenciales">
+          <div class="titulo">Cursos presenciales</div>
+          
+          <div class="informacion">
+             <div class="contenedor-informacion">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide" style="background-image: url(evidencias/grupo.jpg)"></div>
+                      <div class="swiper-slide" style="background-image: url(evidencias/clases.jpg)"></div>
+                      <div class="swiper-slide" style="background-image: url(evidencias/70494046_3052970351411503_5675503349827371008_n.jpg)"></div>
+                      <div class="swiper-slide" style="background-image: url(evidencias/67571784_2879664345408772_4575982165749137408_o.jpg)"></div>
+                      <div class="swiper-slide" style="background-image: url(evidencias/66647399_2879702015405005_5468215442004770816_o.png)"></div>
+                    </div>
 
+                     <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="nota">Desliza con tu dedo para ver la galeria</div>
+                 </div>
+             </div>
+             <div class="contenedor-informacion">
+                 <div class="titulo-contenido">2019</div>
+                 <div>
+                     Se tuvo la oportunidad de ir a impartir dos cursos de programación en el Instituto Nacional de ecología y cambio Climatico. Durante la estadia en este
+                     sitio, se desarrollaron temas de programación en C# ( Orientado a Objetos ) y Bases de Datos ( lenguaje SQL orientado a web).
+                 </div>
+             </div>
+          </div>
+          
+      </div>
+    
+     
+    
+    
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">chat_bubble</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating red"><i class="material-icons">chat_bubble</i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">publish</i></a></li>
+      </ul>
+    </div>
+                        
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
       <script type="text/javascript" src="js/materialize.js"></script>
+      <script type="text/javascript" src="js/swiper.min.js"></script>
       
       <script>
         
@@ -136,6 +188,28 @@
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
           });
+          
         </script>
+        
+        <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'cube',
+      grabCursor: true,
+       loop: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,        
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
     </body>
   </html>
