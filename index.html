@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+       <link rel="stylesheet" href="css/style.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      
+      <nav class="navbar-fixed margen blue-grey darken-4">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"><img src="img/logo.png" alt=""></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html"><i class="material-icons">person</i>Sobre mi</a></li>
+            <li><a href="badges.html"><i class="material-icons">attach_file</i>Servicios</a></li>
+            <li><a href="collapsible.html"><i class="material-icons">next_week</i>Portafolio</a></li>
+            <li><a href="mobile.html"><i class="material-icons">contacts</i>Contacto</a></li>            
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav grey darken-4 " id="mobile-demo">
+        <li>
+            <img src="img/0.jpg" alt="">
+        </li>
+        <li>
+            <a href="sass.html">
+                <i class="material-icons" style="color: white;">
+                    person
+                </i>
+                Sobre mí
+            </a>
+        </li>
+        <li>
+            <a href="badges.html">
+                <i class="material-icons" style="color: white;">
+                    attach_file
+                </i>
+                Servicios
+            </a>
+        </li>
+        <li>
+            <a href="collapsible.html">
+                <i class="material-icons" style="color: white;">
+                   next_week
+                </i>
+                Portafolio
+            </a>
+        </li>
+        <li>
+            <a href="mobile.html">
+                <i class="material-icons" style="color: white;">
+                    contacts
+                </i>
+                Contacto
+            </a>
+        </li>
+      </ul>
+
+      <div class="landing">
+          <div class="content-landing">
+              <div class="nombre">
+                  Carlos Alberto Basilio Torres
+              </div>
+              <div class="actividades">
+                  <div class="actividad-item">Desarrollador Web</div>
+                  <div class="actividad-item">Desarrollador Desktop</div>
+                  <div>Docente de Programación</div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          asdasdasd
+      </div>
+      
+      <div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+  </ul>
+</div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <script type="text/javascript" src="js/materialize.js"></script>
+      
+      <script>
+        
+          document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, options);
+          });
+
+          // Or with jQuery
+
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.fixed-action-btn').floatingActionButton();
+          });
+        </script>
+    </body>
+  </html>
