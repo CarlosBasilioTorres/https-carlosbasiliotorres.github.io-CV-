@@ -137,6 +137,10 @@ div.actividad-item{
     .about{        
         flex-direction: column;
     }
+    
+    .about .imagen{
+        height: 300px;
+    }
 }
 
 
