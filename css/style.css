@@ -68,8 +68,14 @@ div.actividad-item{
         padding: 0px 10px;
     }
     
-    .nombre{
-        font-size: 10px;
+    .content-landing .nombre{
+        font-size: 40px;
+    }
+}
+
+@media(max-width:600px){
+    .content-landing .nombre{
+        font-size: 20px;
     }
 }
 
