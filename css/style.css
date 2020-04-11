@@ -38,7 +38,7 @@ nav ul li a i{
 .aportacion{
     margin-top: 100px;
     display: flex;
-    width: 100%;
+    width: 100%;    
 }
 
 .aportacion>div{    
@@ -267,6 +267,22 @@ footer a{
     
     .about .imagen{
         height: 300px;
+    }
+    
+    .aportacion{
+        display: flex;        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .aportacion>div{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .demo{
+        margin-top: 50px;
     }
 }
 
