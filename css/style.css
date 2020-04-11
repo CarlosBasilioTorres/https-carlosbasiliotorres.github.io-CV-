@@ -158,8 +158,36 @@ div.actividad-item{
 }
 
 .nota{
+    display: none;
     text-align: center;
     font-style: italic;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer>div{
+    text-align: center;
+    margin: 35px 0px;
+}
+
+footer div div{
+    margin: 10px 0px;
+}
+
+footer .titulo-col{
+    font-size: 20px;
+}
+
+footer .contenido-col{
+    font-size: 16px;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
 }
 
 @media(max-width:1000px){
@@ -178,6 +206,9 @@ div.actividad-item{
         flex-direction: column;
     }
         
+    .nota{
+        display: block;
+    }
     
     .informacion{
         flex-direction: column;
@@ -193,7 +224,7 @@ div.actividad-item{
 }
 
 
-@media(max-width:600px){
+@media(max-width:650px){
     .content-landing .nombre{
         font-size: 20px;
     }
@@ -207,6 +238,17 @@ div.actividad-item{
     .content-landing .actividades div{     border: none;
         padding: 3px 2px;
         font-size: 10px
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer>div
+    {
+        margin: 0;
+        border-bottom: 2px solid white;
     }
 }
 
