@@ -1,3 +1,4 @@
+
 .margen{
     padding: 0px 70px;
 }
@@ -23,6 +24,34 @@ nav ul li a i{
     background-position: center;
     background-repeat: no-repeat;
     background: linear-gradient(to right,rgba(0,0,0,.063),rgba(66,134,244,.603)),url('../img/fondo.jpg')
+}
+
+.landing-aportaciones{
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: linear-gradient(to right,rgba(0,0,0,.063),rgba(66,134,244,.603)),url('../img/fondo.jpg')
+}
+
+.aportacion{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+}
+
+.aportacion>div{    
+    width: 50%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumen,.demo{
+    display: flex;
+    flex-direction: column;
 }
 
 .content-landing{
@@ -165,7 +194,25 @@ div.actividad-item{
 
 footer{
     display: flex;
+    margin-top: 50px;
     justify-content: space-around;
+}
+
+.temas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;    
+    margin-bottom: 10px;
+}
+
+.temas select{
+    -webkit-appearance: none;
+    border: 1px solid black;
+    width: 250px;
+    height: 30px;
+    font-family: 'Comic Neue';    
 }
 
 footer>div{

@@ -332,6 +332,8 @@ function calendarStyle(){
 
     switch(theme){
         case 0:
+            document.getElementById("container-calendar").style.background = "white";
+            document.getElementById("container-calendar").style.color = 'black';
             break;
         case 1:
             document.getElementById("container-calendar").style.background = "black";
