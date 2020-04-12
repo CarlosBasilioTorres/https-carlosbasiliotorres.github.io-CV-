@@ -1,169 +1,310 @@
-#container-calendar{  
-    position: relative;      
-    min-width: 290px;
-    max-width: 450px;
-    margin: 0px auto;
-    font-family: 'Comic Neue';
-    min-height: 250px !important;        
+*{
+    margin: 0;
+    padding: 0;        
+    text-decoration: none;
 }
 
-#app{
+
+/*paddings*/
+
+.normal-padding{
+    padding: 0px 30px;
+}
+
+/*special animations*/
+
+.fixed-top{
+    position: fixed;
+    top: 0;
+}
+
+/*navigation bar*/
+
+nav{    
+    width: 100%;
+    height: 60px;   
+    display: flex;    
+    max-width: 100% !important;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.4);    
+}
+
+.nav-container{
+    width: 100%;
+    display: flex;    
+    justify-content: space-between;
+}
+
+
+/*logos*/
+
+.icon-logo{
+    width: 50px;
     height: 100%;
-    border: 1px solid  ;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
 }
 
-#container{
-    width: 99%;
+.icon-logo a{
+    width: 50px;
     height: 100%;
-    margin: 0px auto;        
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
-#container #month{
-    width: 98%;
-    height: 15%;    
-    display: flex;
-    margin: 0px auto;
-    align-items: center;        
-    justify-content: space-between;            
+.icon-logo img{
+    width: 100%;
+    max-width: 50px;
 }
 
-#container .month-container{
-    display: flex;
-    flex-direction: column;
+/*menus*/
+
+
+/*mobile menu*/
+.mobile-menu{    
+    height: 60px;
+    position: absolute;
+    display: none;
     justify-content: center;
     align-items: center;
-}
-
-#container #yearNumber{
-    text-align: center;
-    font-family: 'Comic neue';
-    border: none;
-    -webkit-appearance: none;
-    cursor: pointer;
-}
-
-
-#container #monthName{    
-    border: none;
-    text-align: center;
-    font-family: 'Comic neue';
-    -webkit-appearance: none;
-    cursor: pointer;
-}
-
-#container #monthName:disabled{
-    background-color: white;
-}
-
-#container #month button{
-    border: 1px solid rgba(0,0,0,.3);
-    box-shadow: 3px 3px 3px rgba(0,0,0,.7);
+    text-decoration: none;
     background-color: transparent;
+    border: none;
     cursor: pointer;
 }
 
-#container #month button:hover{
-    box-shadow: none;
+.mobile-menu i{
+    font-size: 30px;
+    color: white;    
 }
 
+.mobile-logo{    
+    width: 100%;
+    height: max-content !important;
+    justify-content: center;    
+}
 
-#container .weekNames{    
-    width: 98%;
-    height: 5%;    
+.mobile-logo i{
+    font-size: 190px;
+}
+
+.mobile-logo img{
+    width: 80%;
+    margin-bottom: 30px;
+    border-radius: 130px;
+}
+
+/*options menu*/
+.menu-options-row{    
+    height: 100%;    
     display: flex;    
-    margin: 0px auto;          
-    justify-content: space-around;    
+    list-style: none;            
+    justify-content: space-between;
 }
 
-#container .weekNames .nameDay{
-    width: 12%;
+.menu-options-row li{
     height: 100%;
     display: flex;    
-    text-align: center;
-    align-items: center;    
+    margin-right: 15px;
+    align-items: center;
     justify-content: center;    
-    border-bottom: 1px solid;
 }
 
-#container .days{
-    width: 98%;
-    height: 79%;      
-    margin: 0px auto;    
+.container-sidenav{    
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: -100%;    
+    background-color: rgba(0,0,0,.7);        
+    opacity: 0;
+    top: 0;
+    -webkit-transition: all .6s ease;
 }
 
-#container .week{
-    width: 100%;    
-    height: 20%;        
-    display: flex;      
-    flex-direction: row;
-}
-
-
-#container .week .day{
-    width: 10%;
-    margin: auto;
-    height: 50%;
-    min-height: 20px;
-    border: 1px solid black;
-    text-align: right;
-    padding-top: 3px;
-    padding-right: 5px;
-}
-
-
-.container-months, .container-years{    
-    width: 95%;    
-    height: 87%;
-    top:23px;
-    left: 2.5%;
-    position: absolute;    
-    background-color: white;    
-    border: 1px solid black;
-    display: none;
-}
-
-.container-years{
-    top: 35px;
-}
-
-.container-months button{
-    width: 20%;
-    height: 29%;    
-    margin: 1.3% 2.5%;
-    border: 1px solid;  
-    background-color: white;  
-    cursor: pointer;
-    font-size: 10px;
-    text-align: center;
-    padding: 0;
-}
-
-
-.container-years button{
-    width: 30%;
-    height: 29%;
-    margin: 1.3% 1.6%;
-    border: 1px solid;  
-    background-color: white;  
-    cursor: pointer;
-    font-size: 10px;
-    text-align: center;
-    padding: 0;
-}
-
-.container-months button:hover, .container-years button:hover{
-    background-color: rgba(0, 0, 0, .1);
-}
-
-.close-btn{
+.sidenav{    
+    width: 270px;
+    height: 100vh;
     position: absolute;
-    right: -23px;
-    top: -20px;
-    width: 30px !important;
-    height: 30px !important;
-    border-radius: 10px;    
+    padding-top: 50px;    
 }
 
-.close-btn:hover{
-    background-color: white !important;
+.sidenav li {
+    width: 100%;
+    height: 40px;    
+    display: flex;    
+}
+
+.sidenav li a{
+    width: 100%;
+    display: flex;    
+    padding-left:40px ;
+    align-items: center;
+    text-decoration: none; 
+    -webkit-transition: all .4s ease;   
+}
+
+
+
+.sidenav li a i{
+    margin-right: 10px;    
+}
+
+.menu-options-row li a{    
+    height: 100%;
+    display: flex;        
+    padding: 0px 5px;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;    
+}
+
+.menu-options-row a i{
+    margin-right: 5px;
+}
+
+.menu-options-row a:hover, .sidenav li a:hover{
+    background-color: rgba(255,255,255,.2);
+}
+
+
+
+/*backgorund colors*/
+.green-dark-4{
+    background-color: green;
+}
+
+
+.bluegrey-dark-4{
+    background-color: #212121 ;
+}
+.grey-dark-4{
+    background-color: #263238 ;
+}
+
+/*text colors*/
+
+.white-text-color{
+    color: white;
+}
+
+.green-dark-4-text-color{
+    color: green;
+}
+
+/*alignments*/
+
+.center{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.justify{
+    text-align: justify;
+}
+
+/*lists*/
+
+.super-list{
+    margin: 25px 0px;
+    list-style: decimal;
+}
+
+/*footer*/
+
+footer{
+    height: 250px;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.footer-item-col{
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-item-col > div
+{
+    margin: 3px 0px;
+}
+
+/*columns array*/
+
+.columns-row-3{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*responsive mode*/
+
+/*button-styles*/
+
+.btn-radio-style{
+    width: 250px;
+}
+
+.green-btn{
+    background-color: green;
+    color: white;
+    height: 50px;
+    font-size: 20px;
+}
+
+/*fonts styles*/
+
+.principal-title{
+    font-size: 50px;    
+    margin-top: 90px;
+}
+
+/*galleries*/
+
+.container-simple-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-simple-gallery img{
+    width: 33%;
+    min-width: 270px;
+    margin: 15px 20px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.7);
+}
+
+@media(max-width:900px){
+    .icon-logo{
+        width: 100%;        
+    }
+
+    .mobile-menu{
+        display: flex;
+    }
+
+    .menu-options-row{
+        display: none;
+    }
+
+    footer{
+        height: 450px;
+        flex-direction: column;
+    }
+
+    .footer-item-col{
+        width: 80%;
+        margin-top: 50px 0px;        
+        border-bottom: 2px solid white;
+    }
+
+    .container-simple-gallery img{
+        width: 90%;        
+    }
 }
