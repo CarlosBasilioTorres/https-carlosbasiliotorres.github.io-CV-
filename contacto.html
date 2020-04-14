@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        s
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/envarton.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <nav class="bluegrey-dark-4 fixed-top">
+        <div class="nav-container normal-padding">
+          <div class="icon-logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+          <a class="mobile-menu" onclick="showMobileMenu();"><i class="material-icons">menu</i></a>
+          <ul class="menu-options-row">
+            <li><a href="index.html" class="white-text-color"><i class="material-icons">person</i>Sobre mi</a></li>
+            <li><a href="servicios.html" class="white-text-color"><i class="material-icons">attach_file</i>Servicios</a></li>
+            <li><a href="collapsible.html" class="white-text-color"><i class="material-icons">next_week</i>Portafolio</a></li>            
+            <li><a href="aportaciones.html" class="white-text-color"><i class="material-icons">apps</i>Aportaciones</a></li>
+            <li><a href="mobile.html" class="white-text-color"><i class="material-icons">contacts</i>Contacto</a></li>            
+
+          </ul>
+        </div>
+      </nav>
+
+      
+
+      <div class="principal-content columns-row">
+          <div class="col-2">
+            Si requieres algun servicio de mi parte
+
+            <ul class="super-list">
+              <li>Un curso presencial</li>
+              <li>Curso en Linea</li>
+              <li>Página web</li>
+              <li>Aplicación Móvil</li>
+              <li>Diseño de Marca</li>
+            </ul>
+
+            <p>por favor comunicate conmigo en alguno de estos medios</p>
+          </div>
+          <div class="col-2 carrousel-container">
+            <i class="material-icons control-prev" onclick="previus();">chevron_left</i>
+                <div class="carrousel-item" id="item-1">item 1</div>
+                <div class="carrousel-item" id="item-2">item 2</div>
+                <div class="carrousel-item" id="item-3">item 3</div>
+                <div class="carrousel-item" id="item-4">item 4</div>
+            <i class="material-icons control-next" onclick="next();">chevron_right</i>
+          </div>
+      </div>
+
+      <footer class="page-footer grey-dark-4 columns-row white-text-color">                
+        <div class="footer-item-col">
+            <div><i class="material-icons">assignment_ind</i></div>
+            <div class="titulo-col">Carlos Alberto Basilio Torres</div>
+            <div class="contenido-col">Coyoacan</div>
+            <div class="contenido-col">Ciudad de México</div>
+            <div id="fecha"></div>
+        </div>
+        
+        <div class="footer-item-col">
+            <div><i class="material-icons">info_outline</i></div>
+            <div>Redes Sociales</div>
+            <div>
+                <div><a href="https://www.facebook.com/MasterOfCodes/" class="white-text-color">Master Of Codes</a></div>                    
+            </div>
+            <div>
+                <div><a href="https://www.youtube.com/channel/UCmCAXUIXogvqxd-25YMs0xw?view_as=subscriber" class="white-text-color">Cursos de Programación</a></div>
+            </div>
+        </div>
+
+        <div class="footer-item-col">
+            <div><i class="material-icons">local_phone</i></div>
+            <div>Contacto</div>
+            <div><a href="" class="white-text-color">Whatsapp</a></div>
+            <div><a href="" class="white-text-color">Messenger</a></div> 
+            <div>carlos.basilio.torres@gmail.com</div>     
+        </div>                                                   
+      </footer> 
+
+      <script src="js/envartonDinamicStyles.js"></script>
+
+      <script>
+        carrousel({
+          active: true,
+          items: 4, 
+        })
+      </script>
+</body>
+</html>

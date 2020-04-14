@@ -182,6 +182,10 @@ nav{
     background-color: #263238 ;
 }
 
+.green-light-1{
+    background-color: #66bb6a;
+}
+
 /*text colors*/
 
 .white-text-color{
@@ -237,15 +241,20 @@ footer{
 
 /*columns array*/
 
-.columns-row-3{
+.columns-row{
     display: flex;
     justify-content: space-around;
 }
 
-
+.col-2{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /*responsive mode*/
 
-/*button-styles*/
 
 .btn-radio-style{
     width: 250px;
@@ -278,6 +287,47 @@ footer{
     min-width: 270px;
     margin: 15px 20px;
     box-shadow: 10px 10px 10px rgba(0,0,0,.7);
+}
+/*carrousel*/
+
+.carrousel-container{
+    position: relative;    
+    display: flex;
+    flex-direction: row;    
+    overflow: hidden;
+    background-color: rgba(0,0,0,.03);
+    
+}
+
+.carrousel-item{
+    min-width: 100%;
+    height: 100%;    
+    display: flex;    
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px rgba(0,0,0,.2);
+    -webkit-transition: all .4s ease;        
+}
+
+.control-prev{
+    left: 0;
+    color: gray;
+    font-size: 50px;    
+    position: absolute;        
+    cursor: pointer;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.7);
+    z-index: 10;
+}
+
+.control-next{  
+    z-index: 10;  
+    right: 0;
+    color: gray;
+    font-size: 50px;    
+    position: absolute;        
+    cursor: pointer;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.7);
 }
 
 @media(max-width:900px){
