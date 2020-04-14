@@ -25,6 +25,11 @@ function hideMobileMenu(){
 }
 
 function previus(){
+    contador --;
+    if(contador < 1){
+        contador = items;
+    }
+
     for(let i = 0; i < items; i++){
         desplazamientos[i] -= 100;
         if(desplazamientos[i] == -300){
@@ -35,6 +40,12 @@ function previus(){
     
     for(let i = 0; i < items;i++){
         document.getElementById("item-" + (i+1)).style.left = desplazamientos[i] + "%";
+        let aux = i+1;
+        if(aux == contador){
+            document.getElementById("item-"+(i+1)).style.opacity = 1;
+        }else{
+            document.getElementById("item-"+(i+1)).style.opacity = 0;
+        }
     }
 
     console.table(desplazamientos)
